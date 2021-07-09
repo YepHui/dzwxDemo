@@ -77,7 +77,7 @@
             android:drawableEnd="@drawable/visible_off"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:hint="密码"
+            android:hint="确认密码"
             android:inputType="textPassword"
             android:singleLine="true"></EditText>
 
