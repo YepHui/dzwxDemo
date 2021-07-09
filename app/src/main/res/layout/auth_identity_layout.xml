@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthIdentityActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/t_ai_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/t_auth_identity_layout"
+            android:textSize="25sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_ai_title"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/et_ai_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="姓名"
+            android:singleLine="true"></EditText>
+
+        <EditText
+            android:id="@+id/et_ai_id_card"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_ai_name"
+            android:layout_centerHorizontal="true"
+            android:hint="身份证号"
+            android:singleLine="true"></EditText>
+        <Button
+            android:id="@+id/btn_ai_submit"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_ai_id_card"
+            android:layout_marginTop="25dp"
+            android:text="注册"
+            android:textColor="@color/light_grey"></Button>
+    </RelativeLayout>
+</RelativeLayout>

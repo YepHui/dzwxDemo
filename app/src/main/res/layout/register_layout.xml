@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/t_r_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/t_register_layout"
+            android:textSize="25sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/iv_dzwx_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_r_title"
+        android:src="@drawable/dzwx_logo"></ImageView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_dzwx_logo"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/et_r_phone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="手机号"
+            android:singleLine="true"></EditText>
+
+        <EditText
+            android:id="@+id/et_r_captcha"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_r_phone"
+            android:hint="验证码"
+            android:singleLine="true"></EditText>
+
+        <Button
+            android:id="@+id/btn_send_captcha"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_r_phone"
+            android:layout_toRightOf="@+id/et_r_captcha"
+            android:text="发送验证码"></Button>
+
+        <EditText
+            android:id="@+id/et_r_pwd"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_r_captcha"
+            android:clickable="true"
+            android:drawableEnd="@drawable/visible_off"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:singleLine="true"></EditText>
+
+        <EditText
+            android:id="@+id/et_r_confirm_pwd"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_r_pwd"
+            android:clickable="true"
+            android:drawableEnd="@drawable/visible_off"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:singleLine="true"></EditText>
+
+        <TextView
+            android:id="@+id/tv_user_agreement"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_r_confirm_pwd"></TextView>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user_agreement"
+            android:layout_marginTop="25dp"
+            android:text="注册"
+            android:textColor="@color/light_grey"></Button>
+
+        <Button
+            android:id="@+id/btn_r_back"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:text="取消"></Button>
+    </RelativeLayout>
+</RelativeLayout>
