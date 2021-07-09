@@ -1,9 +1,7 @@
 package com.example.dzwxdemo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
 
