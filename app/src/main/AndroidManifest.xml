@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".AuthIdentityActivity"></activity>
+        <activity android:name=".UserInfoActivity"></activity>
+        <activity android:name=".AuthIdentityActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />

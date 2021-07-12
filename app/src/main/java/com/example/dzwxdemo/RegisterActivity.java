@@ -56,7 +56,7 @@ public class RegisterActivity extends BaseActivity {
             }
         });
 
-        TextUtils.getBuilder().click(getResources().getString(R.string.company_partner_protocol), getResources().getColor(R.color.green), new TextUtils.OnClickListener() {
+        TextUtils.getBuilder().click(getResources().getString(R.string.company_partner_protocol), getResources().getColor(R.color.theme_color), new TextUtils.OnClickListener() {
             @Override
             public void onClick(int position) {
                 switch (position) {

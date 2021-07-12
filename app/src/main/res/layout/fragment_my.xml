@@ -1,17 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#009688"
-    android:gravity="center">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/el_fm_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="MY"
-        android:textColor="#FFFFFF"
-        android:textSize="50dp" />
-</LinearLayout>
+        android:background="@color/theme_color">
+
+        <ImageButton
+            android:id="@+id/ib_fm_setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="#00000000"
+            android:src="@drawable/ic_baseline_settings_24"></ImageButton>
+
+        <RelativeLayout
+            android:id="@+id/rl_fm_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ib_fm_setting">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_fm_profile_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/user"
+                app:civ_border_color="#28BDF8"
+                app:civ_border_width="4dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/tv__fm_username"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/civ_fm_profile_photo"
+                android:singleLine="true"
+                android:text="李元浩"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_fm_phone"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv__fm_username"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/civ_fm_profile_photo"
+                android:singleLine="true"
+                android:text="130******91"
+                android:textColor="#BCFFFFFF"
+                android:textSize="20sp"></TextView>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="25dp"
+                android:layout_marginRight="10dp"
+                android:background="#00000000"
+                android:src="@drawable/ic_baseline_chevron_right_24"></ImageButton>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/el_fm_header"
+        android:background="#E8E8E8">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp">
+
+            <Button
+                android:id="@+id/btn_fm_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_radius_border"
+                android:drawableLeft="@drawable/ic_baseline_article_24"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="交易记录"></Button>
+
+            <Button
+                android:id="@+id/btn_fm_collection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_fm_transaction"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_baseline_star_24"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我的收藏"></Button>
+
+            <Button
+                android:id="@+id/btn_fm_footprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_fm_collection"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_foot"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我的足迹"></Button>
+
+            <Button
+                android:id="@+id/btn_fm_exam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_fm_footprint"
+                android:background="@drawable/bottom_radius_border"
+                android:drawableLeft="@drawable/ic_baseline_article_24"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我的考试"></Button>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
