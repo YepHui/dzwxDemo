@@ -1,11 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light"
     tools:context=".UserInfoActivity">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="编辑个人资料"></TextView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/t_uil_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/t_user_info_layout"
+            android:textSize="25sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_uil_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_uil_title">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_uil_photo"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/user"
+            app:civ_border_color="#28BDF8"
+            app:civ_border_width="4dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/civ_uil_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="点击更换头像"
+            android:textColor="@color/theme_color"
+            android:textSize="17sp"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_uil_photo"
+        android:layout_marginHorizontal="40dp">
+
+        <RelativeLayout
+            android:id="@+id/ll_uil_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/verical_border">
+
+            <TextView
+                android:id="@+id/tv_uil_name"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="姓名"
+                android:textSize="17sp"></TextView>
+
+            <EditText
+                android:id="@+id/et_uil_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/tv_uil_name"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:text="李元浩"></EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_uil_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_uil_name"
+            android:background="@drawable/bottom_border">
+
+            <TextView
+                android:id="@+id/tv_uil_nickname"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="昵称"
+                android:textSize="17sp"></TextView>
+
+            <EditText
+                android:id="@+id/et_uil_nickname"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/tv_uil_nickname"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:text="小虎"></EditText>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="11.5dp"
+                android:layout_toRightOf="@id/et_uil_nickname"
+                android:background="#00000000"
+                android:src="@drawable/ic_baseline_chevron_right_grey_24"></ImageButton>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_uil_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_uil_nickname">
+
+            <TextView
+                android:id="@+id/tv_uil_phone"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="手机号"
+                android:textSize="17sp"></TextView>
+
+            <EditText
+                android:id="@+id/et_uil_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/tv_uil_phone"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:text="13047495791"></EditText>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_uil_idcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_uil_phone"
+            android:background="@drawable/verical_border">
+
+            <TextView
+                android:id="@+id/tv_uil_idcard"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="身份证号"
+                android:textSize="17sp"></TextView>
+
+            <EditText
+                android:id="@+id/et_uil_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/tv_uil_idcard"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:text="370602199510030227"></EditText>
+        </RelativeLayout>
+        <!--
+                <Button
+                    android:id="@+id/btn_uil_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_uil_idcard"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_radius_border"
+                    android:text="保存"
+                    android:textColor="@color/white"></Button>-->
+    </RelativeLayout>
 </RelativeLayout>

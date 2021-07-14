@@ -36,7 +36,7 @@
                 app:civ_border_width="4dp"></de.hdodenhof.circleimageview.CircleImageView>
 
             <TextView
-                android:id="@+id/tv__fm_username"
+                android:id="@+id/tv_fm_nickname"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -50,7 +50,7 @@
                 android:id="@+id/tv_fm_phone"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv__fm_username"
+                android:layout_below="@id/tv_fm_nickname"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/civ_fm_profile_photo"
                 android:singleLine="true"

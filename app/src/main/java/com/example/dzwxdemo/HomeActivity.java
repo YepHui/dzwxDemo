@@ -1,11 +1,15 @@
 package com.example.dzwxdemo;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.dzwxdemo.ui.BaseFragment;
 import com.example.dzwxdemo.ui.CourseFragment;
 import com.example.dzwxdemo.ui.HomeFragment;
 import com.example.dzwxdemo.ui.MyFragment;
@@ -13,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends BaseActivity {
     private BottomNavigationView bottomNavigationView;
-    private Fragment fragment;
+    private BaseFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,21 +34,36 @@ public class HomeActivity extends BaseActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                String tag = null;
                 switch (item.getItemId()) {
                     case R.id.myhome:
                         fragment = new HomeFragment();
+                        tag = "home_fragment";
                         break;
                     case R.id.course:
                         fragment = new CourseFragment();
+                        tag = "course_fragment";
                         break;
                     case R.id.my:
                         fragment = new MyFragment();
+                        tag = "my_fragment";
+                        break;
+                    default:
                         break;
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment, tag).commit();
                 return true;
             }
         });
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == 201) {
+            Bundle bundle = data.getExtras();
+            Log.d("onActivityResult", "...");
+            fragment.refresh(bundle);
+        }
+    }
 }

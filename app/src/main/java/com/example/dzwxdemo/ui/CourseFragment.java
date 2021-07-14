@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.dzwxdemo.R;
 
-public class CourseFragment extends Fragment {
+public class CourseFragment extends BaseFragment {
 
     @Nullable
     @Override

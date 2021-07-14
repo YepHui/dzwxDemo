@@ -9,7 +9,7 @@
     <string name="t_register_layout">注册</string>
     <string name="t_user_agreement_layout">APP隐私协议</string>
     <string name="t_auth_identity_layout">实名认证</string>
-
+    <string name="t_user_info_layout">编辑用户信息</string>
 
     <string name="title_activity_menu_action">MainActivity</string>
     <string name="title_home">首页</string>
