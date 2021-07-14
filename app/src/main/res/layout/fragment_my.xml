@@ -59,6 +59,7 @@
                 android:textSize="20sp"></TextView>
 
             <ImageButton
+                android:id="@+id/ib_fm_user_info"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"

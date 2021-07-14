@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class MyFragment extends BaseFragment {
     private View v;
     private RelativeLayout relativeLayout;
     private TextView nickname;
+    private ImageButton imageButton;
 
     @Nullable
     @Override
@@ -32,12 +34,20 @@ public class MyFragment extends BaseFragment {
                 startActivityForResult(intent, 101);
             }
         });
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), UserInfoActivity.class);
+                startActivityForResult(intent, 101);
+            }
+        });
         return v;
     }
 
     private void init() {
         relativeLayout = v.findViewById(R.id.rl_fm_user_info);
         nickname = v.findViewById(R.id.tv_fm_nickname);
+        imageButton=v.findViewById(R.id.ib_fm_user_info);
     }
 
     @Override

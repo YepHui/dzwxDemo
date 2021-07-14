@@ -25,7 +25,8 @@
         android:id="@+id/rl_uil_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/t_uil_title">
+        android:layout_below="@id/t_uil_title"
+        android:onClick="updatePhoto">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/civ_uil_photo"
@@ -96,7 +97,7 @@
 
             <EditText
                 android:id="@+id/et_uil_nickname"
-                android:layout_width="200dp"
+                android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:layout_toRightOf="@id/tv_uil_nickname"
                 android:background="@null"
@@ -109,6 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="11.5dp"
+                android:layout_alignParentRight="true"
                 android:layout_toRightOf="@id/et_uil_nickname"
                 android:background="#00000000"
                 android:src="@drawable/ic_baseline_chevron_right_grey_24"></ImageButton>
