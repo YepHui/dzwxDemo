@@ -105,6 +105,7 @@
                 android:text="小虎"></EditText>
 
             <ImageButton
+                android:id="@+id/ib_uil_nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="11.5dp"
@@ -164,15 +165,5 @@
                 android:singleLine="true"
                 android:text="370602199510030227"></EditText>
         </RelativeLayout>
-        <!--
-                <Button
-                    android:id="@+id/btn_uil_submit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/ll_uil_idcard"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/button_radius_border"
-                    android:text="保存"
-                    android:textColor="@color/white"></Button>-->
     </RelativeLayout>
 </RelativeLayout>

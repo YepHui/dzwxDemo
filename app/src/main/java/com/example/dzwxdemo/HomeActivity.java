@@ -60,10 +60,14 @@ public class HomeActivity extends BaseActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == 201) {
-            Bundle bundle = data.getExtras();
-            Log.d("onActivityResult", "...");
-            fragment.refresh(bundle);
+        switch (resultCode) {
+            case 201:
+                Bundle bundle = data.getExtras();
+                Log.d("onActivityResult", "...");
+                fragment.refresh(bundle);
+                break;
+            default:
+                break;
         }
     }
 }
