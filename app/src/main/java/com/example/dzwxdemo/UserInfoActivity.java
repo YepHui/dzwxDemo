@@ -216,7 +216,6 @@ public class UserInfoActivity extends BaseActivity {
             //相册
             try {
                 Uri selectedImage = data.getData();//获取路径
-                Log.d("UserInfoActivity", selectedImage.getPath());
                 Tiny.FileCompressOptions options = new Tiny.FileCompressOptions();
                 Tiny.getInstance().source(selectedImage).asFile().withOptions(options).compress(new FileWithBitmapCallback() {
                     @Override
@@ -271,7 +270,6 @@ public class UserInfoActivity extends BaseActivity {
     private void choosePhoto() {
         //这是打开系统默认的相册(就是你系统怎么分类,就怎么显示,首先展示分类列表)
         Intent picture = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        Log.d("UserInfoActivity111", MediaStore.Images.Media.EXTERNAL_CONTENT_URI.toString());
         startActivityForResult(picture, 2);
     }
 
@@ -320,7 +318,6 @@ public class UserInfoActivity extends BaseActivity {
     }
 
     private void saveImageToServer(final Bitmap bitmap, String outfile) {
-        Log.d("UserInfoActivityOutfile", outfile);
         File file = new File(outfile);
 
         // TODO: 2018/12/4  这里就可以将图片文件 file 上传到服务器,上传成功后可以将bitmap设置给你对应的图片展示
