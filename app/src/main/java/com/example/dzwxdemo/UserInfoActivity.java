@@ -17,7 +17,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -64,20 +63,7 @@ public class UserInfoActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_info_layout);
         init();
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左侧添加一个默认的返回图标
-        getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putString("nickname", nickname.getText().toString());
-                intent.putExtras(bundle);
-                setResult(201, intent);
-                finish();
-            }
-        });
+        initToolbar(toolbar);
         nickname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,6 +102,24 @@ public class UserInfoActivity extends BaseActivity {
         tvNickName = findViewById(R.id.tv_uil_nickname);
         ibNickname = findViewById(R.id.ib_uil_nickname);
         changePhoto = findViewById(R.id.rl_uil_photo);
+    }
+
+    @Override
+    protected void initToolbar(Toolbar toolbar) {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左侧添加一个默认的返回图标
+        getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putString("nickname", nickname.getText().toString());
+                intent.putExtras(bundle);
+                setResult(201, intent);
+                finish();
+            }
+        });
     }
 
     public void updatePhoto(View view) {
