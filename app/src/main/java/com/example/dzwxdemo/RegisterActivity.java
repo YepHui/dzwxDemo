@@ -3,7 +3,6 @@ package com.example.dzwxdemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,29 +34,23 @@ public class RegisterActivity extends BaseActivity {
         initToolbar(toolbar);
 
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*if (validateForm()) {
-                    Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
-                    startActivity(intent);
-                }*/
-                Intent intent = new Intent(RegisterActivity.this, AuthIdentityActivity.class);
+        register.setOnClickListener(v -> {
+            /*if (validateForm()) {
+                Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
                 startActivity(intent);
-            }
+            }*/
+            Intent intent = new Intent(RegisterActivity.this, AuthIdentityActivity.class);
+            startActivity(intent);
         });
 
-        TextUtils.getBuilder().click(getResources().getString(R.string.company_partner_protocol), getResources().getColor(R.color.theme_color), new TextUtils.OnClickListener() {
-            @Override
-            public void onClick(int position) {
-                switch (position) {
-                    case 0:
-                        //跳转链接
-                        Intent intent = new Intent(RegisterActivity.this, UserAgreementActivity.class);
-                        startActivity(intent);
-                        break;
+        TextUtils.getBuilder().click(getResources().getString(R.string.company_partner_protocol), getResources().getColor(R.color.theme_color), position -> {
+            switch (position) {
+                case 0:
+                    //跳转链接
+                    Intent intent = new Intent(RegisterActivity.this, UserAgreementActivity.class);
+                    startActivity(intent);
+                    break;
 
-                }
             }
         }, "《达知网校隐私政策》").checkBox(this, userAgreement, new TextUtils.OnImageClickListener() {
             @Override
@@ -73,12 +66,7 @@ public class RegisterActivity extends BaseActivity {
             }
         }).clickInto(userAgreement);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        back.setOnClickListener(v -> finish());
     }
 
     private Boolean validateForm() {

@@ -26,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zxy.tiny.Tiny;
-import com.zxy.tiny.callback.FileWithBitmapCallback;
 
 import java.io.File;
 import java.io.IOException;
@@ -64,24 +63,9 @@ public class UserInfoActivity extends BaseActivity {
         setContentView(R.layout.user_info_layout);
         init();
         initToolbar(toolbar);
-        nickname.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toUpdateNickname();
-            }
-        });
-        tvNickName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toUpdateNickname();
-            }
-        });
-        ibNickname.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                toUpdateNickname();
-            }
-        });
+        nickname.setOnClickListener(view -> toUpdateNickname());
+        tvNickName.setOnClickListener(view -> toUpdateNickname());
+        ibNickname.setOnClickListener(view -> toUpdateNickname());
        /* changePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,16 +93,13 @@ public class UserInfoActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左侧添加一个默认的返回图标
         getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putString("nickname", nickname.getText().toString());
-                intent.putExtras(bundle);
-                setResult(201, intent);
-                finish();
-            }
+        toolbar.setNavigationOnClickListener(v -> {
+            Intent intent = new Intent();
+            Bundle bundle = new Bundle();
+            bundle.putString("nickname", nickname.getText().toString());
+            intent.putExtras(bundle);
+            setResult(201, intent);
+            finish();
         });
     }
 
@@ -138,52 +119,43 @@ public class UserInfoActivity extends BaseActivity {
         choosePhotoTV = layout.findViewById(R.id.photo);
         cancelTV = layout.findViewById(R.id.cancel);
         //设置监听
-        takePhotoTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //"点击了照相";
-                //  6.0之后动态申请权限 摄像头调取权限,SD卡写入权限
-                //判断是否拥有权限，true则动态申请
-                if (ContextCompat.checkSelfPermission(UserInfoActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
-                        && ContextCompat.checkSelfPermission(UserInfoActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(UserInfoActivity.this,
-                            new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                            MY_ADD_CASE_CALL_PHONE);
-                } else {
-                    try {
-                        //有权限,去打开摄像头
-                        takePhoto();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+        takePhotoTV.setOnClickListener(view -> {
+            //"点击了照相";
+            //  6.0之后动态申请权限 摄像头调取权限,SD卡写入权限
+            //判断是否拥有权限，true则动态申请
+            if (ContextCompat.checkSelfPermission(UserInfoActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
+                    && ContextCompat.checkSelfPermission(UserInfoActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(UserInfoActivity.this,
+                        new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        MY_ADD_CASE_CALL_PHONE);
+            } else {
+                try {
+                    //有权限,去打开摄像头
+                    takePhoto();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                dialog.dismiss();
             }
+            dialog.dismiss();
         });
-        choosePhotoTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //"点击了相册";
-                //  6.0之后动态申请权限 SD卡写入权限
-                if (ContextCompat.checkSelfPermission(UserInfoActivity.this,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(UserInfoActivity.this,
-                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                            MY_ADD_CASE_CALL_PHONE2);
+        choosePhotoTV.setOnClickListener(view -> {
+            //"点击了相册";
+            //  6.0之后动态申请权限 SD卡写入权限
+            if (ContextCompat.checkSelfPermission(UserInfoActivity.this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(UserInfoActivity.this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        MY_ADD_CASE_CALL_PHONE2);
 
-                } else {
-                    //打开相册
-                    choosePhoto();
-                }
-                dialog.dismiss();
+            } else {
+                //打开相册
+                choosePhoto();
             }
+            dialog.dismiss();
         });
-        cancelTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();//关闭对话框
-            }
+        cancelTV.setOnClickListener(view -> {
+            dialog.dismiss();//关闭对话框
         });
     }
 
@@ -209,11 +181,8 @@ public class UserInfoActivity extends BaseActivity {
             if (!state.equals(Environment.MEDIA_MOUNTED)) return;
             // 把原图显示到界面上
             Tiny.FileCompressOptions options = new Tiny.FileCompressOptions();
-            Tiny.getInstance().source(readpic()).asFile().withOptions(options).compress(new FileWithBitmapCallback() {
-                @Override
-                public void callback(boolean isSuccess, Bitmap bitmap, String outfile, Throwable t) {
-                    saveImageToServer(bitmap, outfile);//显示图片到imgView上
-                }
+            Tiny.getInstance().source(readpic()).asFile().withOptions(options).compress((isSuccess, bitmap, outfile, t) -> {
+                saveImageToServer(bitmap, outfile);//显示图片到imgView上
             });
         } else if (requestCode == 2 && resultCode == Activity.RESULT_OK
                 && null != data) {
@@ -221,12 +190,7 @@ public class UserInfoActivity extends BaseActivity {
             try {
                 Uri selectedImage = data.getData();//获取路径
                 Tiny.FileCompressOptions options = new Tiny.FileCompressOptions();
-                Tiny.getInstance().source(selectedImage).asFile().withOptions(options).compress(new FileWithBitmapCallback() {
-                    @Override
-                    public void callback(boolean isSuccess, Bitmap bitmap, String outfile, Throwable t) {
-                        saveImageToServer(bitmap, outfile);
-                    }
-                });
+                Tiny.getInstance().source(selectedImage).asFile().withOptions(options).compress((isSuccess, bitmap, outfile, t) -> saveImageToServer(bitmap, outfile));
             } catch (Exception e) {
                 //"上传失败");
             }

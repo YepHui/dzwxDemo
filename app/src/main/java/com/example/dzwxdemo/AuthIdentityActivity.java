@@ -4,7 +4,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -21,12 +20,9 @@ public class AuthIdentityActivity extends BaseActivity {
         setContentView(R.layout.auth_identity_layout);
         init();
         initToolbar(toolbar);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AuthIdentityActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
+        submit.setOnClickListener(view -> {
+            Intent intent = new Intent(AuthIdentityActivity.this, HomeActivity.class);
+            startActivity(intent);
         });
     }
 

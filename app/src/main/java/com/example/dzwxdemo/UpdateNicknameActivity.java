@@ -4,7 +4,6 @@ package com.example.dzwxdemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,20 +22,17 @@ public class UpdateNicknameActivity extends BaseActivity {
         setContentView(R.layout.update_nickname_layout);
         init();
         initToolbar(toolbar);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast toast = Toast.makeText(UpdateNicknameActivity.this, "保存成功！", Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
+        submit.setOnClickListener(view -> {
+            Toast toast = Toast.makeText(UpdateNicknameActivity.this, "保存成功！", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
 
-                Intent intent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putString("nickname", nickname.getText().toString());
-                intent.putExtras(bundle);
-                setResult(201, intent);
-                finish();
-            }
+            Intent intent = new Intent();
+            Bundle bundle = new Bundle();
+            bundle.putString("nickname", nickname.getText().toString());
+            intent.putExtras(bundle);
+            setResult(201, intent);
+            finish();
         });
     }
 
