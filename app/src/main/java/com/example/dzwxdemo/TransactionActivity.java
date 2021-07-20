@@ -2,7 +2,10 @@ package com.example.dzwxdemo;
 
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -28,6 +31,13 @@ public class TransactionActivity extends BaseActivity {
         initTransactions();
         TransactionAdapter adapter = new TransactionAdapter(TransactionActivity.this, R.layout.transaction_item, transactions);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Transaction transaction = transactions.get(i);
+                Toast.makeText(TransactionActivity.this, transaction.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

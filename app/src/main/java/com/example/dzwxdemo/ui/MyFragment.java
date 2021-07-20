@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.dzwxdemo.CollectionActivity;
 import com.example.dzwxdemo.R;
 import com.example.dzwxdemo.TransactionActivity;
 import com.example.dzwxdemo.UserInfoActivity;
@@ -24,6 +25,7 @@ public class MyFragment extends BaseFragment {
     private TextView nickname;
     private ImageButton imageButton;
     private Button transactionBtn;
+    private Button collectionBtn;
 
     @Nullable
     @Override
@@ -43,6 +45,10 @@ public class MyFragment extends BaseFragment {
             Intent intent = new Intent(getActivity(), TransactionActivity.class);
             startActivity(intent);
         });
+        collectionBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), CollectionActivity.class);
+            startActivity(intent);
+        });
         return v;
     }
 
@@ -51,6 +57,7 @@ public class MyFragment extends BaseFragment {
         nickname = v.findViewById(R.id.tv_fm_nickname);
         imageButton = v.findViewById(R.id.ib_fm_user_info);
         transactionBtn = v.findViewById(R.id.btn_fm_transaction);
+        collectionBtn = v.findViewById(R.id.btn_fm_collection);
     }
 
     @Override
