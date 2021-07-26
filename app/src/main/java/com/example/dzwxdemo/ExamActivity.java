@@ -53,7 +53,7 @@ public class ExamActivity extends BaseActivity {
         for (int i = 1; i < 18; i++) {
             Date now = new Date(new Date().getTime() + (i * 3600000));
             String grade = String.valueOf((int) (Math.random() * 100));
-            Exam exam = new Exam((long) i, R.drawable.weixin_logo, "应急培训-三岗三类人员-第" + i + "节测试", grade, DateFormat.format("yyyy-MM-dd HH:mm", now).toString());
+            Exam exam = new Exam((long) i, R.drawable.ic_weixin, "应急培训-三岗三类人员-第" + i + "节测试", grade, DateFormat.format("yyyy-MM-dd HH:mm", now).toString());
             exams.add(exam);
         }
     }

@@ -52,7 +52,7 @@ public class TransactionActivity extends BaseActivity {
             Date now = new Date(new Date().getTime() + (i * 3600000));
             double c = (double) (Math.round(i * 10000 / 3) / 100.0);
             String price = String.valueOf(c);
-            Transaction transaction = new Transaction("应急培训-三岗三类人员-第" + i + "节测试", new Date().getTime(), DateFormat.format("yyyy-MM-dd HH:mm", now).toString(), price, R.drawable.weixin_logo);
+            Transaction transaction = new Transaction("应急培训-三岗三类人员-第" + i + "节测试", new Date().getTime(), DateFormat.format("yyyy-MM-dd HH:mm", now).toString(), price, R.drawable.ic_weixin);
             transactions.add(transaction);
         }
     }

@@ -49,7 +49,7 @@ public class CollectionActivity extends BaseActivity {
 
     private void initCollection() {
         for (int i = 1; i < 18; i++) {
-            Collection collection = new Collection((long) i, "应急培训-三岗三类人员-第" + i + "节测试", R.drawable.weixin_logo);
+            Collection collection = new Collection((long) i, "应急培训-三岗三类人员-第" + i + "节测试", R.drawable.ic_weixin);
             collections.add(collection);
         }
 
