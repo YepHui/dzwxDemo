@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".CollectionActivity"></activity>
+        <activity android:name=".ExamActivity"></activity>
+        <activity android:name=".CollectionActivity" />
         <activity android:name=".TransactionActivity" />
         <activity android:name=".UpdateNicknameActivity" />
         <activity android:name=".UserInfoActivity" />
@@ -38,7 +39,7 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".UserAgreementActivity" />
-        <activity android:name=".MainActivity"></activity> <!-- 7.0以上摄像头调取 -->
+        <activity android:name=".MainActivity" /> <!-- 7.0以上摄像头调取 -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.dzwxdemo.fileprovider"
