@@ -23,7 +23,6 @@ public class RegisterActivity extends BaseActivity {
     private EditText confirmPassword;
     private TextView userAgreement;
     private Button register;
-    private Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,18 +54,16 @@ public class RegisterActivity extends BaseActivity {
         }, "《达知网校隐私政策》").checkBox(this, userAgreement, new TextUtils.OnImageClickListener() {
             @Override
             public void onChecked() {
-                register.setTextColor(getResources().getColor(R.color.black));
+                register.setTextColor(getResources().getColor(R.color.white));
                 checkFlag = true;
             }
 
             @Override
             public void onUnChecked() {
-                register.setTextColor(getResources().getColor(R.color.light_grey));
+                register.setTextColor(getResources().getColor(R.color.white));
                 checkFlag = false;
             }
         }).clickInto(userAgreement);
-
-        back.setOnClickListener(v -> finish());
     }
 
     private Boolean validateForm() {
@@ -106,13 +103,12 @@ public class RegisterActivity extends BaseActivity {
     @Override
     protected void init() {
         toolbar = findViewById(R.id.t_r_title);
-        phone = findViewById(R.id.et_r_phone);
-        sendCaptcha = findViewById(R.id.btn_send_captcha);
-        captcha = findViewById(R.id.et_r_captcha);
-        password = findViewById(R.id.et_r_pwd);
-        confirmPassword = findViewById(R.id.et_r_confirm_pwd);
+        phone = findViewById(R.id.register_form_phone);
+        sendCaptcha = findViewById(R.id.register_form_btn_captcha);
+        captcha = findViewById(R.id.register_form_captcha);
+        password = findViewById(R.id.register_form_pwd);
+        confirmPassword = findViewById(R.id.register_form_repwd);
         userAgreement = findViewById(R.id.tv_user_agreement);
-        register = findViewById(R.id.btn_register);
-        back = findViewById(R.id.btn_r_back);
+        register = findViewById(R.id.register_form_submit);
     }
 }

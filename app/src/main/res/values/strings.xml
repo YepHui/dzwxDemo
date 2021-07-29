@@ -6,7 +6,7 @@
     //\u3000实现占位缩进
     <string name="company_partner_protocol">\u3000\u3000我已阅读并同意《达知网校隐私政策》</string>
     <string name="t_login_layout">登录</string>
-    <string name="t_register_layout">注册</string>
+    <string name="t_register_layout">账号注册</string>
     <string name="t_user_agreement_layout">APP隐私协议</string>
     <string name="t_auth_identity_layout">实名认证</string>
     <string name="t_user_info_layout">用户信息</string>
