@@ -16,38 +16,116 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/t_auth_identity_layout"
-            android:textSize="25sp"></TextView>
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="16sp"></TextView>
 
     </androidx.appcompat.widget.Toolbar>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/t_ai_title"
-        android:layout_centerHorizontal="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/t_ai_title"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/et_ai_name"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="姓名"
-            android:singleLine="true"></EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="#F5F5F5"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="57dp"
+            android:text="填写身份证信息"
+            android:textColor="@color/text_grey"></TextView>
 
-        <EditText
-            android:id="@+id/et_ai_id_card"
-            android:layout_width="300dp"
+        <RelativeLayout
+            android:layout_width="288dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/et_ai_name"
-            android:layout_centerHorizontal="true"
-            android:hint="身份证号"
-            android:singleLine="true"></EditText>
+            android:layout_marginTop="31dp"
+            android:background="@drawable/full_radius_border">
+
+            <ImageView
+                android:id="@+id/auth_form_img_name"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginVertical="7.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/user_blue"></ImageView>
+
+            <EditText
+                android:id="@+id/auth_form_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toLeftOf="@id/auth_form_name_img_clean"
+                android:layout_toRightOf="@id/auth_form_img_name"
+                android:background="@color/white"
+                android:hint="请输入姓名"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"></EditText>
+
+            <ImageButton
+                android:id="@+id/auth_form_name_img_clean"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/x"></ImageButton>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/full_radius_border">
+
+            <ImageView
+                android:id="@+id/auth_form_img_idcard"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginVertical="7.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/idcard_blue"></ImageView>
+
+            <EditText
+                android:id="@+id/auth_form_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toLeftOf="@id/auth_form_idcard_img_clean"
+                android:layout_toRightOf="@id/auth_form_img_idcard"
+                android:background="@color/white"
+                android:hint="请输入身份证号"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"></EditText>
+
+            <ImageButton
+                android:id="@+id/auth_form_idcard_img_clean"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/x"></ImageButton>
+        </RelativeLayout>
+
         <Button
-            android:id="@+id/btn_ai_submit"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/et_ai_id_card"
-            android:layout_marginTop="25dp"
-            android:text="注册"
-            android:textColor="@color/light_grey"></Button>
-    </RelativeLayout>
+            android:id="@+id/auth_form_submit"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_radius_border"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="16sp"></Button>
+    </LinearLayout>
 </RelativeLayout>

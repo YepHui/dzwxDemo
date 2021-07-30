@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class RegisterActivity extends BaseActivity {
     private EditText confirmPassword;
     private TextView userAgreement;
     private Button register;
+    private ImageButton phoneClean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,9 @@ public class RegisterActivity extends BaseActivity {
             Intent intent = new Intent(RegisterActivity.this, AuthIdentityActivity.class);
             startActivity(intent);
         });
-
+        phoneClean.setOnClickListener(v -> {
+            phone.setText("");
+        });
         TextUtils.getBuilder().click(getResources().getString(R.string.company_partner_protocol), getResources().getColor(R.color.theme_color), position -> {
             switch (position) {
                 case 0:
@@ -110,5 +114,6 @@ public class RegisterActivity extends BaseActivity {
         confirmPassword = findViewById(R.id.register_form_repwd);
         userAgreement = findViewById(R.id.tv_user_agreement);
         register = findViewById(R.id.register_form_submit);
+        phoneClean = findViewById(R.id.register_form_img_clean);
     }
 }
