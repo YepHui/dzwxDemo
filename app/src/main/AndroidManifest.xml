@@ -27,18 +27,20 @@
         <activity android:name=".CollectionActivity" />
         <activity android:name=".TransactionActivity" />
         <activity android:name=".UpdateNicknameActivity" />
-        <activity android:name=".UserInfoActivity" />
+        <activity android:name=".UserInfoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".AuthIdentityActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity">
 
         </activity>
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".UserAgreementActivity" />
         <!-- 7.0以上摄像头调取 -->

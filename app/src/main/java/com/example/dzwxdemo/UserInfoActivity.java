@@ -41,12 +41,11 @@ public class UserInfoActivity extends BaseActivity {
 
     private Toolbar toolbar;
     private CircleImageView headPhoto;
-    private EditText name;
-    private EditText nickname;
-    private EditText phone;
-    private EditText idcard;
-    private TextView tvNickName;
-    private ImageButton ibNickname;
+    private TextView name;
+    private TextView nickname;
+    private TextView phone;
+    private TextView idcard;
+    private RelativeLayout rLNickname;
     private RelativeLayout changePhoto;
 
     private AlertDialog.Builder builder;
@@ -63,29 +62,20 @@ public class UserInfoActivity extends BaseActivity {
         setContentView(R.layout.user_info_layout);
         init();
         initToolbar(toolbar);
-        nickname.setOnClickListener(view -> toUpdateNickname());
-        tvNickName.setOnClickListener(view -> toUpdateNickname());
-        ibNickname.setOnClickListener(view -> toUpdateNickname());
-       /* changePhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                initTakePhoto();
-
-            }
-        });*/
+        rLNickname.setOnClickListener(view -> toUpdateNickname());
+        changePhoto.setOnClickListener(view -> initTakePhoto());
     }
 
     @Override
     protected void init() {
         toolbar = findViewById(R.id.t_uil_title);
         headPhoto = findViewById(R.id.civ_uil_photo);
-        name = findViewById(R.id.et_uil_name);
-        nickname = findViewById(R.id.et_uil_nickname);
-        phone = findViewById(R.id.et_uil_phone);
-        idcard = findViewById(R.id.et_uil_idcard);
-        tvNickName = findViewById(R.id.tv_uil_nickname);
-        ibNickname = findViewById(R.id.ib_uil_nickname);
-        changePhoto = findViewById(R.id.rl_uil_photo);
+        name = findViewById(R.id.user_info_name);
+        nickname = findViewById(R.id.user_info_nickname);
+        phone = findViewById(R.id.user_info_phone);
+        idcard = findViewById(R.id.user_info_idcard);
+        rLNickname = findViewById(R.id.user_info_rl_nickname);
+        changePhoto = findViewById(R.id.user_info_rl_photo);
     }
 
     @Override

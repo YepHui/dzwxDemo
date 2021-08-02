@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/myhome"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/user"
         android:title="首页"></item>
     <item
         android:id="@+id/course"
-        android:icon="@drawable/ic_baseline_article_24"
+        android:icon="@drawable/visible_grey"
         android:title="课程"></item>
     <item
         android:id="@+id/my"
-        android:icon="@drawable/ic_baseline_person_24"
+        android:icon="@drawable/phone_blue"
         android:title="我的"></item>
 </menu>
