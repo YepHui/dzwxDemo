@@ -9,6 +9,7 @@
     <string name="t_register_layout">账号注册</string>
     <string name="t_user_agreement_layout">APP隐私协议</string>
     <string name="t_auth_identity_layout">实名认证</string>
+    <string name="t_my_fragment">会员中心</string>
     <string name="t_user_info_layout">用户信息</string>
     <string name="t_nickname_layout">编辑昵称</string>
     <string name="t_transaction_layout">交易记录</string>

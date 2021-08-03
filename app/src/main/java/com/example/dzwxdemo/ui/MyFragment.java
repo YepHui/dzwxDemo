@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.dzwxdemo.CollectionActivity;
 import com.example.dzwxdemo.ExamActivity;
@@ -24,16 +25,17 @@ public class MyFragment extends BaseFragment {
     private View v;
     private RelativeLayout relativeLayout;
     private TextView nickname;
-    private ImageButton imageButton;
-    private Button transactionBtn;
-    private Button collectionBtn;
-    private Button examBtn;
+    private RelativeLayout imageButton;
+    private RelativeLayout transactionBtn;
+    private RelativeLayout collectionBtn;
+    private RelativeLayout examBtn;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_my, container, false);
         init();
+
         relativeLayout.setOnClickListener(view -> {
             Intent intent = new Intent(getActivity(), UserInfoActivity.class);
             startActivityForResult(intent, 101);

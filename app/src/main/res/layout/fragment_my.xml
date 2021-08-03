@@ -4,7 +4,213 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_fm_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bottom_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="会员中心"
+                android:textColor="@color/black"
+                android:textFontWeight="500"
+                android:textSize="16sp"></TextView>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="17dp"
+                android:src="@drawable/setting_black"></ImageButton>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ib_fm_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:background="@drawable/bottom_border">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_fm_profile_photo"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="23dp"
+                android:src="@drawable/user"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/civ_fm_profile_photo">
+
+                <TextView
+                    android:id="@+id/tv_fm_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:text="李元浩"
+                    android:textSize="12sp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_fm_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/tv_fm_nickname"
+                    android:text="130******91"
+                    android:textSize="12sp"></TextView>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_fm_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bottom_border">
+
+            <ImageView
+                android:id="@+id/img_fm_transaction"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:src="@drawable/transaction_blue"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/img_fm_transaction"
+                android:text="交易记录"
+                android:textSize="14sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_fm_collection"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/bottom_border">
+
+            <ImageView
+                android:id="@+id/img_fm_collection"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:src="@drawable/collection_blue"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/img_fm_collection"
+                android:text="我的收藏"
+                android:textSize="14sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/bottom_border">
+
+            <ImageView
+                android:id="@+id/img_fm_footprint"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:src="@drawable/footprint_blue"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/img_fm_footprint"
+                android:text="我的足迹"
+                android:textSize="14sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_fm_exam"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/bottom_border">
+
+            <ImageView
+                android:id="@+id/img_fm_exam"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:src="@drawable/exam_blue"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/img_fm_exam"
+                android:text="我的考试"
+                android:textSize="14sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!--<RelativeLayout
         android:id="@+id/el_fm_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -131,5 +337,5 @@
                 android:text="我的考试"></Button>
         </RelativeLayout>
 
-    </RelativeLayout>
+    </RelativeLayout>-->
 </RelativeLayout>

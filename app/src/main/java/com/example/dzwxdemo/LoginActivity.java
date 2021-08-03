@@ -1,7 +1,5 @@
 package com.example.dzwxdemo;
 
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
