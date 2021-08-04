@@ -74,7 +74,8 @@
             <RelativeLayout
                 android:id="@+id/user_info_rl_nickname"
                 android:layout_width="match_parent"
-                android:layout_height="55dp">
+                android:layout_height="55dp"
+                android:background="@drawable/list_item_border">
 
                 <TextView
                     android:id="@+id/user_info_text_nickname"
@@ -107,7 +108,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp">
+                android:layout_height="55dp"
+                android:background="@drawable/list_item_border">
 
                 <TextView
                     android:id="@+id/user_info_text_name"
@@ -132,7 +134,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp">
+                android:layout_height="55dp"
+                android:background="@drawable/list_item_border">
 
                 <TextView
                     android:id="@+id/user_info_text_phone"
@@ -157,7 +160,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp">
+                android:layout_height="55dp"
+                android:background="@drawable/list_item_border">
 
                 <TextView
                     android:id="@+id/user_info_text_idcard"
