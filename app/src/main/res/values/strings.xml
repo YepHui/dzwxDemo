@@ -16,6 +16,7 @@
     <string name="t_collection_layout">我的收藏</string>
     <string name="t_exam_layout">我的考试</string>
     <string name="t_setting_layout">更多设置</string>
+    <string name="t_change_pwd_layout">密码修改</string>
 
     <string name="title_activity_menu_action">MainActivity</string>
     <string name="title_home">首页</string>
