@@ -23,26 +23,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ExamActivity"></activity>
+        <activity android:name=".AboutUsActivity"></activity>
+        <activity android:name=".feedbackActivity" />
+        <activity android:name=".ChangePwdActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".ExamActivity" />
         <activity android:name=".CollectionActivity" />
         <activity android:name=".TransactionActivity" />
         <activity android:name=".UpdateNicknameActivity" />
-        <activity android:name=".UserInfoActivity"></activity>
+        <activity android:name=".UserInfoActivity" />
         <activity android:name=".AuthIdentityActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity">
-
-        </activity>
-        <activity android:name=".UserAgreementActivity" />
-        <!-- 7.0以上摄像头调取 -->
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".UserAgreementActivity" /> <!-- 7.0以上摄像头调取 -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.dzwxdemo.fileprovider"

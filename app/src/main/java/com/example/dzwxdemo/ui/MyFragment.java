@@ -17,6 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.dzwxdemo.CollectionActivity;
 import com.example.dzwxdemo.ExamActivity;
 import com.example.dzwxdemo.R;
+import com.example.dzwxdemo.SettingActivity;
 import com.example.dzwxdemo.TransactionActivity;
 import com.example.dzwxdemo.UserInfoActivity;
 
@@ -29,6 +30,7 @@ public class MyFragment extends BaseFragment {
     private RelativeLayout transactionBtn;
     private RelativeLayout collectionBtn;
     private RelativeLayout examBtn;
+    private ImageButton settingBtn;
 
     @Nullable
     @Override
@@ -57,6 +59,10 @@ public class MyFragment extends BaseFragment {
             Intent intent = new Intent(getActivity(), ExamActivity.class);
             startActivity(intent);
         });
+        settingBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), SettingActivity.class);
+            startActivity(intent);
+        });
         return v;
     }
 
@@ -67,6 +73,7 @@ public class MyFragment extends BaseFragment {
         transactionBtn = v.findViewById(R.id.btn_fm_transaction);
         collectionBtn = v.findViewById(R.id.btn_fm_collection);
         examBtn = v.findViewById(R.id.btn_fm_exam);
+        settingBtn = v.findViewById(R.id.ib_fm_setting);
     }
 
     @Override

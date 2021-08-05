@@ -26,11 +26,14 @@
                 android:textSize="16sp"></TextView>
 
             <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/ib_fm_setting"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="17dp"
+                android:background="@color/white"
+                android:scaleType="centerInside"
                 android:src="@drawable/setting_black"></ImageButton>
         </RelativeLayout>
 

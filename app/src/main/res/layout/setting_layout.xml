@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/t_setting_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/t_setting_layout"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="16sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/t_setting_title"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/setting_rl_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bottom_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="登录密码修改"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting_rl_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bottom_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="意见反馈"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting_rl_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bottom_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:text="关于我们"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/to_right_grey"></ImageView>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="71dp"
+            android:background="@drawable/button_radius_border"
+            android:text="退出登录"
+            android:textColor="@color/white"
+            android:textSize="16sp"></Button>
+    </LinearLayout>
+</RelativeLayout>
