@@ -32,17 +32,17 @@ public class ExamAdapter extends ArrayAdapter<Exam> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Exam exam = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
-        CircleImageView image = view.findViewById(R.id.exam_image);
+        //CircleImageView image = view.findViewById(R.id.exam_image);
         TextView name = view.findViewById(R.id.exam_name);
         TextView time = view.findViewById(R.id.exam_time);
         TextView grade = view.findViewById(R.id.exam_grade);
-        image.setImageResource(exam.getImgUrl());
+        //image.setImageResource(exam.getImgUrl());
         name.setText(exam.getName());
         time.setText(exam.getTime());
         grade.setText(exam.getGrade() + "分");
-        if (Integer.parseInt(exam.getGrade()) < 60) {
+        /*if (Integer.parseInt(exam.getGrade()) < 60) {
             grade.setTextColor(R.color.red);
-        }
+        }*/
         return view;
     }
 }

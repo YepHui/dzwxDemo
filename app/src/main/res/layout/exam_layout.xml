@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExamActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/t_exam_title"
         android:layout_width="match_parent"
@@ -15,7 +16,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/t_exam_layout"
-            android:textSize="25sp"></TextView>
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="16sp"></TextView>
 
     </androidx.appcompat.widget.Toolbar>
 

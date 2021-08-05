@@ -27,5 +27,6 @@
         android:id="@+id/lv_collection_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/t_collection_title"></ListView>
+        android:layout_below="@id/t_collection_title"
+        android:layout_marginTop="10dp"></ListView>
 </RelativeLayout>

@@ -1,63 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="66dp"
+    android:background="@drawable/list_item_border"
     android:descendantFocusability="blocksDescendants"
-    android:gravity="center_vertical"
     android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/exam_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginVertical="10dp"
-        android:layout_marginLeft="20dp"></de.hdodenhof.circleimageview.CircleImageView>
-
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginRight="30dp"
-        android:layout_toRightOf="@id/exam_image"
-        android:background="@drawable/list_item_border">
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="22dp">
 
         <TextView
             android:id="@+id/exam_name"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:singleLine="true"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="reeeeeeeeeeeeeeeee"></TextView>
+            android:text="reeeeeeeeeeeeeeeee"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="14sp"></TextView>
 
 
         <TextView
             android:id="@+id/exam_time"
             android:layout_width="145dp"
-            android:layout_height="35dp"
+            android:layout_height="22dp"
             android:layout_below="@id/exam_name"
-            android:layout_marginLeft="15dp"
             android:gravity="center_vertical"
             android:singleLine="true"
-            android:text="2021-07-20 13:14"></TextView>
-
-        <TextView
-            android:id="@+id/exam_grade"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_below="@id/exam_name"
-            android:layout_alignParentRight="true"
-            android:layout_toRightOf="@id/exam_time"
-            android:gravity="right"
-            android:singleLine="true"
-            android:textColor="#454343"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:text="78分"></TextView>
-
+            android:text="2021-07-20 13:14"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="12sp"></TextView>
     </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/exam_grade"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/grade_red"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="100分"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="12dp"></TextView>
 
 
 </RelativeLayout>

@@ -1,68 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="303dp"
+    android:layout_height="111dp"
     android:descendantFocusability="blocksDescendants"
     android:gravity="center_vertical"
     android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/transaction_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"></de.hdodenhof.circleimageview.CircleImageView>
 
-    <RelativeLayout
-        android:id="@+id/rl_transaction_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_toRightOf="@id/transaction_image"
-        android:background="@drawable/list_item_border">
 
-        <TextView
-            android:id="@+id/transaction_name"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:gravity="center_vertical"
-            android:singleLine="true"
-            android:textSize="16sp"
-            android:textStyle="bold"></TextView>
-
-        <TextView
-            android:id="@+id/transaction_id"
-            android:layout_width="145dp"
-            android:layout_height="15dp"
-            android:layout_below="@id/transaction_name"
-            android:layout_marginLeft="15dp"
-            android:gravity="center_vertical"
-            android:singleLine="true"></TextView>
-
-        <TextView
-            android:id="@+id/transaction_time"
-            android:layout_width="145dp"
-            android:layout_height="35dp"
-            android:layout_below="@id/transaction_id"
-            android:layout_marginLeft="15dp"
-            android:gravity="center_vertical"
-            android:singleLine="true"></TextView>
-
-        <TextView
-            android:id="@+id/transaction_price"
-            android:layout_width="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/transaction_image"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_below="@id/transaction_name"
-            android:layout_alignParentRight="true"
-            android:layout_toRightOf="@id/transaction_time"
-            android:gravity="center"
-            android:singleLine="true"
-            android:textColor="#454343"
-            android:textSize="24sp"
-            android:textStyle="bold"></TextView>
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"></de.hdodenhof.circleimageview.CircleImageView>
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_transaction_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/transaction_image"
+            android:background="@drawable/list_item_border">
+
+            <TextView
+                android:id="@+id/transaction_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/transaction_id"
+                android:layout_width="145dp"
+                android:layout_height="15dp"
+                android:layout_below="@id/transaction_name"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"></TextView>
+
+            <TextView
+                android:id="@+id/transaction_time"
+                android:layout_width="145dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/transaction_id"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:singleLine="true"></TextView>
+
+            <TextView
+                android:id="@+id/transaction_price"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/transaction_name"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/transaction_time"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#454343"
+                android:textSize="24sp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
 
 </RelativeLayout>

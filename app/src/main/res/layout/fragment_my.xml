@@ -60,6 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="18dp"
                     android:text="李元浩"
+                    android:textColor="@color/black"
                     android:textSize="12sp"></TextView>
 
                 <TextView
@@ -68,6 +69,7 @@
                     android:layout_height="18dp"
                     android:layout_below="@+id/tv_fm_nickname"
                     android:text="130******91"
+                    android:textColor="@color/black"
                     android:textSize="12sp"></TextView>
             </RelativeLayout>
 
@@ -102,6 +104,7 @@
                 android:layout_marginLeft="11dp"
                 android:layout_toRightOf="@id/img_fm_transaction"
                 android:text="交易记录"
+                android:textColor="@color/black"
                 android:textSize="14sp"></TextView>
 
             <ImageView
@@ -134,6 +137,7 @@
                 android:layout_marginLeft="11dp"
                 android:layout_toRightOf="@id/img_fm_collection"
                 android:text="我的收藏"
+                android:textColor="@color/black"
                 android:textSize="14sp"></TextView>
 
             <ImageView
@@ -165,6 +169,7 @@
                 android:layout_marginLeft="11dp"
                 android:layout_toRightOf="@id/img_fm_footprint"
                 android:text="我的足迹"
+                android:textColor="@color/black"
                 android:textSize="14sp"></TextView>
 
             <ImageView
@@ -197,6 +202,7 @@
                 android:layout_marginLeft="11dp"
                 android:layout_toRightOf="@id/img_fm_exam"
                 android:text="我的考试"
+                android:textColor="@color/black"
                 android:textSize="14sp"></TextView>
 
             <ImageView
