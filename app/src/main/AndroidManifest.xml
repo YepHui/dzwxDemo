@@ -23,7 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".AboutUsActivity"></activity>
+        <activity android:name=".AboutUsActivity" />
         <activity android:name=".FeedbackActivity" />
         <activity android:name=".ChangePwdActivity" />
         <activity android:name=".SettingActivity" />
@@ -34,9 +34,7 @@
         <activity android:name=".UserInfoActivity" />
         <activity android:name=".AuthIdentityActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".HomeActivity">
-
-        </activity>
+        <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

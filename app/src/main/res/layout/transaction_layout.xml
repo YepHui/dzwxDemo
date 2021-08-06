@@ -10,7 +10,7 @@
         android:id="@+id/t_transaction_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@drawable/bottom_white_border">
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,10 +23,104 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <LinearLayout
+        android:id="@+id/transaction_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/t_transaction_title"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/tracsation_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/trasnsaction_tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bottom_blue_border"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/text_blue"
+                android:textFontWeight="400"
+                android:textSize="14sp"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tracsation_pending"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/trasnsaction_tv_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="待付款"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tracsation_paid"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/trasnsaction_tv_paid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="已付款"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/transaction_blank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/transaction_menu"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/transaction_img_blank"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:src="@drawable/transaction_blank"></ImageView>
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transaction_img_blank"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="暂无数据"
+            android:textColor="#D6D6D6"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
+    </RelativeLayout>
+
     <ListView
         android:id="@+id/lv_transaction_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/t_transaction_title"></ListView>
+        android:layout_below="@+id/transaction_menu"></ListView>
 
 </RelativeLayout>

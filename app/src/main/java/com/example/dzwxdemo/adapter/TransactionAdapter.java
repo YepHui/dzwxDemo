@@ -31,16 +31,18 @@ public class TransactionAdapter extends ArrayAdapter<Transaction> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Transaction transaction = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
-        CircleImageView image = view.findViewById(R.id.transaction_image);
+        //CircleImageView image = view.findViewById(R.id.transaction_image);
         TextView name = view.findViewById(R.id.transaction_name);
         TextView id = view.findViewById(R.id.transaction_id);
         TextView time = view.findViewById(R.id.transaction_time);
         TextView price = view.findViewById(R.id.transaction_price);
-        image.setImageResource(transaction.getImageUrl());
+        TextView status = view.findViewById(R.id.transaction_status);
+        //image.setImageResource(transaction.getImageUrl());
         name.setText(transaction.getName());
         id.setText(transaction.getId().toString());
         time.setText(transaction.getCreateTime());
         price.setText(transaction.getPrice());
+        status.setText(transaction.getStatus());
         return view;
     }
 }
