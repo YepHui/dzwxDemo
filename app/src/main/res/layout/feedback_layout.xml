@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feedbackActivity">
+    tools:context=".FeedbackActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/t_feedback_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/t_feedback_layout"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="16sp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/t_feedback_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginLeft="18dp"
+                android:text="*"
+                android:textColor="@color/red"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_marginLeft="3dp"
+                android:text="标题"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/feedback_form_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/quarter_radius_border"
+            android:gravity="center_vertical"
+            android:hint="请输入投诉类型（如账号问题、学习问题、建议、其他等）"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textSize="11sp">
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginLeft="18dp"
+                android:text="*"
+                android:textColor="@color/red"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_marginLeft="3dp"
+                android:text="内容"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/feedback_form_content"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/quarter_radius_border"
+            android:gravity="left"
+            android:hint="请描述您的问题，方便我们尽快为您处理~"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textSize="11sp">
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_marginLeft="3dp"
+                android:text="上传凭证"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="18dp"></ImageButton>
+
+        <Button
+            android:id="@+id/feedback_form_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_unl_nickname"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="53dp"
+            android:background="@drawable/button_radius_border"
+            android:text="提交"
+            android:textColor="@color/white"></Button>
+    </LinearLayout>
+</RelativeLayout>

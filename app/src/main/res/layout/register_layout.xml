@@ -94,6 +94,7 @@
                 <EditText
                     android:id="@+id/register_form_captcha"
                     android:layout_width="match_parent"
+                    android:layout_marginRight="15dp"
                     android:layout_height="30dp"
                     android:layout_marginVertical="5dp"
                     android:layout_marginLeft="3dp"

@@ -27,7 +27,7 @@ public class SettingActivity extends BaseActivity {
             startActivity(intent);
         });
         feedback.setOnClickListener(view -> {
-            Intent intent = new Intent(SettingActivity.this, feedbackActivity.class);
+            Intent intent = new Intent(SettingActivity.this, FeedbackActivity.class);
             startActivity((intent));
         });
         aboutUs.setOnClickListener(view -> {

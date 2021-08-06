@@ -98,7 +98,7 @@
             <EditText
                 android:id="@+id/auth_form_idcard"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="29dp"
                 android:layout_marginVertical="5dp"
                 android:layout_marginLeft="3dp"
                 android:layout_toLeftOf="@id/auth_form_idcard_img_clean"

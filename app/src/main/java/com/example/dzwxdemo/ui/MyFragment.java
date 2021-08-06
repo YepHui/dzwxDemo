@@ -24,7 +24,6 @@ import com.example.dzwxdemo.UserInfoActivity;
 public class MyFragment extends BaseFragment {
 
     private View v;
-    private RelativeLayout relativeLayout;
     private TextView nickname;
     private RelativeLayout imageButton;
     private RelativeLayout transactionBtn;
@@ -38,11 +37,6 @@ public class MyFragment extends BaseFragment {
         v = inflater.inflate(R.layout.fragment_my, container, false);
         init();
 
-        relativeLayout.setOnClickListener(view -> {
-            Intent intent = new Intent(getActivity(), UserInfoActivity.class);
-            startActivityForResult(intent, 101);
-
-        });
         imageButton.setOnClickListener(view -> {
             Intent intent = new Intent(getActivity(), UserInfoActivity.class);
             startActivityForResult(intent, 101);
@@ -67,7 +61,6 @@ public class MyFragment extends BaseFragment {
     }
 
     private void init() {
-        relativeLayout = v.findViewById(R.id.rl_fm_user_info);
         nickname = v.findViewById(R.id.tv_fm_nickname);
         imageButton = v.findViewById(R.id.ib_fm_user_info);
         transactionBtn = v.findViewById(R.id.btn_fm_transaction);
