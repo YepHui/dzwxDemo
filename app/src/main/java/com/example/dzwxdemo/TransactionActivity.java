@@ -39,6 +39,7 @@ public class TransactionActivity extends BaseActivity {
         init();
         initToolbar(toolbar);
         initTransactions();
+        blank.setVisibility(View.INVISIBLE);
         TransactionAdapter adapter = new TransactionAdapter(TransactionActivity.this, R.layout.transaction_item, transactions);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

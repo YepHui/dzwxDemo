@@ -1,10 +1,21 @@
 package com.example.dzwxdemo;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.example.dzwxdemo.ui.BaseFragment;
 import com.example.dzwxdemo.ui.CourseFragment;
@@ -12,11 +23,14 @@ import com.example.dzwxdemo.ui.HomeFragment;
 import com.example.dzwxdemo.ui.MyFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.jetbrains.annotations.NotNull;
+
 
 public class HomeActivity extends BaseActivity {
     private BottomNavigationView bottomNavigationView;
     private BaseFragment fragment;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +41,13 @@ public class HomeActivity extends BaseActivity {
         init();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @SuppressLint("ResourceType")
     public void init() {
         bottomNavigationView = findViewById(R.id.bottom_nav);
+        Resources resources = getResources();
+        bottomNavigationView.setItemTextColor(resources.getColorStateList(R.drawable.nav_menu_text_color, null));
+        bottomNavigationView.setItemIconTintList(resources.getColorStateList(R.drawable.nav_menu_text_color, null));
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             String tag = null;
             switch (item.getItemId()) {
@@ -65,4 +84,12 @@ public class HomeActivity extends BaseActivity {
                 break;
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.bottom_nav_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
 }

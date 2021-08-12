@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/myhome"
-        android:icon="@drawable/user"
-        android:title="首页"></item>
+        android:icon="@drawable/home_grey"
+        android:title="首页"
+        app:showAsAction="always"></item>
     <item
         android:id="@+id/course"
-        android:icon="@drawable/visible_grey"
-        android:title="课程"></item>
+        android:icon="@drawable/course_grey"
+        android:title="课程"
+        app:showAsAction="always"></item>
     <item
         android:id="@+id/my"
-        android:icon="@drawable/phone_blue"
-        android:title="我的"></item>
+        android:icon="@drawable/user_menu_blue"
+        android:title="我的"
+        app:showAsAction="always"></item>
 </menu>
